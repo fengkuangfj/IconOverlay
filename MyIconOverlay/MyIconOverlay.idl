@@ -1,0 +1,35 @@
+// MyIconOverlay.idl : MyIconOverlay 的 IDL 源
+//
+
+// 此文件将由 MIDL 工具处理以
+// 产生类型库(MyIconOverlay.tlb)和封送处理代码。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(6C123484-D964-4E5D-B3CA-D5A31A8816F1),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IIconOverlay : IDispatch{
+};
+[
+	uuid(6DA58ECB-FF0C-485A-B574-2661E1E89F1A),
+	version(1.0),
+]
+library MyIconOverlayLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(C40416CE-AE80-49F9-ADB7-D4294E22B129)		
+	]
+	coclass IconOverlay
+	{
+		[default] interface IIconOverlay;
+	};
+};
+
+import "shobjidl.idl";
